@@ -1,11 +1,14 @@
 import './App.css';
 import React from 'react';
+import { People } from './People';
 
 class App extends React.Component {
 	constructor(props) {
+		console.log('Constructor called');
+		// Initialize state
 		super(props);
 		this.state = {
-			count: 0,
+			people: People,
 		};
 	}
 	render() {
@@ -20,15 +23,10 @@ class App extends React.Component {
 				}}
 			>
 				<h1>Class Components</h1>
-				<p>See console.</p>
-				<p>count: {this.state.count}</p>
-				<button
-					onClick={() => {
-						this.setState({ count: this.state.count + 1 });
-					}}
-				>
-					Increment
-				</button>
+				<p>
+					This example explores ReactJS and React Components
+					lifecycle.
+				</p>
 			</div>
 		);
 	}
