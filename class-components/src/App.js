@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { People } from './People';
+import { people } from './People';
 
 class App extends React.Component {
 	constructor(props) {
@@ -8,10 +8,11 @@ class App extends React.Component {
 		// Initialize state
 		super(props);
 		this.state = {
-			people: People,
+			friends: people,
 		};
 	}
 	render() {
+		console.log('Render invoked');
 		return (
 			<div
 				className="App"
@@ -22,11 +23,14 @@ class App extends React.Component {
 					padding: '20px',
 				}}
 			>
-				<h1>Class Components</h1>
+				<h1>Welcome Friends!</h1>
 				<p>
 					This example explores ReactJS and React Components
 					lifecycle.
 				</p>
+				{this.state.friends.map((person) => (
+					<div key={person.id}>{person.first_name}</div>
+				))}
 			</div>
 		);
 	}

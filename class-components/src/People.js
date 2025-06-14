@@ -1,4 +1,4 @@
-export const People = [
+export const people = [
 	{
 		id: 1,
 		first_name: 'Adam',
@@ -18,5 +18,13 @@ export const People = [
 				lastName: 'SwiftKey',
 			},
 		],
+	},
+	{
+		id: 2,
+		first_name: 'Eve',
+		last_name: 'Coder',
+		email: 'alsocodes@learning.com',
+		gender: 'female',
+		occupation: 'Full Stack Engineer',
 	},
 ];
